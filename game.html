@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <div id="loader" class="loader"></div>
+    <div class="container flex-center flex-column">
+        <div id="hud">
+            <div id="hud-question">Question 1 of 4</div>
+            <div id="hud-score">Score: 0</div>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+        <h2 id="question">Question text</h2>
+        <div class="choices">
+            <p class="choice-preference"><span class="choice-text" data-number="1"></span></p>
+            <p class="choice-preference"><span class="choice-text" data-number="2"></span></p>
+            <p class="choice-preference"><span class="choice-text" data-number="3"></span></p>
+            <p class="choice-preference"><span class="choice-text" data-number="4"></span></p>
+        </div>
+        <div id="feedback" class="feedback"></div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

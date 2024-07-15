@@ -1,0 +1,22 @@
+[
+    {
+        "question": "I speak without a mouth and hear without ears. I have nobody, but I come alive with wind. What am I?",
+        "choices": ["A ghost", "An echo", "A shadow", "A cloud"],
+        "answer": 1
+    },
+    {
+        "question": "What has keys but can’t open locks?",
+        "choices": ["map", "book", "piano", "clock"],
+        "answer": 2
+    },
+    { 
+        "question": "I'm not alive, but I can grow. I don’t have lungs, but I need air. What am I?",
+        "choices": ["fire", "plant", "balloon", "river"],
+        "answer": 0
+    },
+    {
+        "question": "What comes once in a minute, twice in a moment, but never in a thousand years?",
+        "choices": ["letter M", "second", "shadow", "moon"],
+        "answer": 0
+    }
+]

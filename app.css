@@ -1,0 +1,59 @@
+:root{
+    background-color:  #f0f0f0;
+    font-size: 62.5%;
+}
+a{
+    text-decoration: none;
+    background-color: white;
+    padding: 6px 10px;
+    
+    
+    border: 4px 8px;
+    border-color:  green;
+    border-style: solid;
+    color: black;
+    border-radius: 4px;
+    font-size: 2rem;
+    margin-left: 27px;
+    display:inline-flex;
+   
+
+}
+a:hover{
+    background-color: pink;
+     
+    transition: 0.5s;
+    scale: 1.3;
+    display: flexbox;
+    cursor: pointer;
+
+}
+
+*{
+    
+
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+h1{
+    font-size: 5.8rem;
+    margin-bottom: 4rem;
+    
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content:right;
+    align-items: center;
+    max-width: 80rem;
+    margin:0;
+}
+
+h2{
+    font-size: 3.2rem;
+    
+}
+
+

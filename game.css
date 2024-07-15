@@ -1,0 +1,100 @@
+.container {
+    height: 100vh;
+    background-color: #f0f0f0;
+    padding-top: 20vh;
+    text-align: center; 
+}
+
+.choices {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.choice-preference {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer; 
+    transition: opacity 0.3s ease;
+    width: 50%;
+}
+
+.choice-preference:hover {
+    opacity: 0.7; 
+}
+
+.feedback {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #fff;
+    text-align: center;
+    display: none; 
+}
+
+.feedback.correct {
+    color: green;
+}
+
+.feedback.incorrect {
+    color: red;
+}
+
+.progress-bar {
+    width: 30%; 
+    height: 15px;
+    background-color: #ddd;
+    border-radius: 10px;
+    margin-bottom:200 px;
+    overflow: hidden;
+}
+
+.progress {
+    width: 0%;
+    height: 100%;
+    background-color: #007BFF;
+    transition: width 0.5s ease;
+}
+
+
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader::before {
+    content: '';
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.hidden {
+    display: none;
+}
