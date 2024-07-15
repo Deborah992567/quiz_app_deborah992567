@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const finalScoreElement = document.getElementById('finalscore');
-    const username = document.getElementById('username');
-    const saveScoreBtn = document.getElementById('Savescorebtn');
+    const usernameInput = document.getElementById('username');
+    const saveScoreForm = document.getElementById('saveScoreForm');
+    const saveScoreBtn = document.getElementById('saveScoreBtn');
 
     const mostRecentScore = localStorage.getItem('mostRecentScore');
-    const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
     const MAX_HIGH_SCORES = 5;
 
     if (mostRecentScore !== null) {
@@ -13,32 +13,27 @@ document.addEventListener('DOMContentLoaded', () => {
         finalScoreElement.innerText = 'No score available';
     }
 
-    username.addEventListener('keyup', () => {
-        saveScoreBtn.disabled = !username.value;
-    });
+    saveScoreForm.addEventListener('submit', saveHighScore);
 
-    const saveHighScore = (e) => {
+    function saveHighScore(e) {
         e.preventDefault();
 
         const score = {
             score: mostRecentScore,
-            name: username.value
+            name: usernameInput.value
         };
 
+        let highScores = JSON.parse(localStorage.getItem('highScores')) || [];
         highScores.push(score);
         highScores.sort((a, b) => b.score - a.score);
-        highScores.splice(MAX_HIGH_SCORES);
+        highScores = highScores.slice(0, MAX_HIGH_SCORES);
 
         localStorage.setItem('highScores', JSON.stringify(highScores));
 
-        // Show the "Saved" message
-        saveScoreBtn.innerText = "Saved!";
+        console.log('Most recent score:', mostRecentScore); // Add console log here
+        console.log('High scores:', highScores); // Add console log here
 
-        // Wait for a second and then redirect to highscore page
-        setTimeout(() => {
-            window.location.assign('highscore.html'); // Ensure this path is correct
-        }, 1000);
-    };
-
-    document.getElementById('saveScoreForm').addEventListener('submit', saveHighScore);
+        // Redirect to highscore page
+        window.location.href = 'highscore.html'; // Ensure this path is correct
+    }
 });
